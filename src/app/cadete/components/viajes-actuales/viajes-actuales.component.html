@@ -1,0 +1,16 @@
+<div class="viajes-actuales--container" *ngIf="myArr.length != 0; else elseBlock">
+  <div class="card-container" *ngFor="let item of myArr">
+    <app-card-viajes-actuales direccion="{{item.travelEquipmentDTOs[0].equipment.cliente.address}}"
+      title="{{item.lastStatusTravel}}" hora="{{item.creationDate | date:'shortTime' }}"
+      equipo="{{item.travelEquipmentDTOs[0].equipment.mark}}" [statusTravel]="item.lastStatusTravel"
+      [idtravel]="item.id" [newStatusTravel]="item.lastStatusTravel">
+      [idCadete]="item.travelEquipmentDTOs[item.travelEquipmentDTOs.length-1].cadete.id"
+    </app-card-viajes-actuales>
+  </div>
+</div>
+<ng-template #elseBlock >
+  <div class="notArr">
+    <img src="../../../../assets/img/noData.svg" style="width: 15rem;" alt="">
+    <h1>No pudimos encontrar algun viaje actual</h1>
+  </div>
+</ng-template>

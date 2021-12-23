@@ -1,0 +1,60 @@
+<div class="list-cards">
+
+  <div class="info-Card">
+    <h1> {{title == '1' ? "Retiro" : "Entrega"}} </h1>
+    <p>{{direccion}} </p>
+  </div>
+
+  <div class="icono">
+    <button (click)="changeState()"><i class='bx bx-expand-alt'></i></button>
+  </div>
+
+</div>
+
+
+
+<div class="card--container">
+  <div class="card--content" [class.open]="state" [class.close]="!state">
+    <div class="close">
+      <button (click)="changeState()"><i class='bx bxs-x-circle'></i></button>
+    </div>
+    <div class="header">
+      <h1> Viaje en Curso </h1>
+      <p> Lugar de {{statusTravel == 1 ? "Retiro" : "Entrega"}} en {{direccion}} </p>
+    </div>
+    <div class="body">
+      <span>
+        <h4>Dirreccion</h4>
+        <p> {{direccion}} </p>
+      </span>
+      <span>
+        <h4>Hora</h4>
+        <p>{{hora}}</p>
+      </span>
+      <span>
+        <h4>Equipo</h4>
+        <p> {{equipo}} </p>
+      </span>
+      <span>
+        <h4>Estado de Viaje</h4>
+        <p> {{statusTravel}} </p>
+        <!-- <h4> {{idCadete}} </h4> -->
+      </span>
+    </div>
+    <div class="footer">
+      <div class="btn--container">
+        <div class="btn--content">
+          <button (click)="actualizarViaje()" class="btn terminado">
+            <i class='bx bxs-check-circle'></i>
+          </button>
+        </div>
+        <div class="btn--content" *ngIf="statusTravel == 2 || statusTravel == 6" >
+          <button (click)=" abandonarViaje()" class="btn abandonar">
+            <i class='bx bxs-x-circle'></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

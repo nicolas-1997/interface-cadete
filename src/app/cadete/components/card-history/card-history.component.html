@@ -1,0 +1,47 @@
+<div class="list-cards">
+
+  <div class="info-Card">
+    <h1> {{title == '1' ? "Retiro" : "Entrega"}} </h1>
+    <p>{{direccion}} </p>
+  </div>
+
+  <div class="icono">
+    <button (click)="changeState()"><i class='bx bx-expand-alt'></i></button>
+  </div>
+
+</div>
+
+
+
+<div class="card--container">
+  <div class="card--content" [class.open]="state" [class.close]="!state">
+    <div class="close">
+      <button (click)="changeState()"><i class='bx bxs-x-circle'></i></button>
+    </div>
+    <div class="header">
+      <h1> {{title == "9" ? "Recibido" : "Entregado" }} </h1>
+      <p> Felicidades has {{title == '1' ? "Retirado" : "Entregado"}} un equipo con exito!!</p>
+    </div>
+    <div class="body">
+      <span>
+        <h4>Dirreccion</h4>
+        <p> {{direccion}} </p>
+      </span>
+      <span>
+        <h4>Hora</h4>
+        <p>{{hora}}</p>
+      </span>
+      <span>
+        <h4>Equipo</h4>
+        <p> {{equipo}} </p>
+      </span>
+      <span>
+        <h4>Estado de Viaje</h4>
+        <p> {{statusTravel == "9" ? "Recibido" : "Entregado" }} </p>
+      </span>
+    </div>
+    <div class="footer">
+      <img src="../../../../assets/img/confirmed1.svg" alt="">
+    </div>
+  </div>
+</div>

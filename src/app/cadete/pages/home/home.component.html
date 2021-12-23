@@ -1,1 +1,21 @@
-<h1>Hola soy el Home de Cadete</h1>
+<div class="home--container">
+  <section class="header">
+    <h1>Bienvenido Cadete</h1>
+    <h1>{{nombreCadete}}</h1>
+  </section>
+  <section class="options">
+    <div class="btn">
+      <a [routerLink]="['/cadete/viajes']" routerLinkActive="router-link-active">Viajes</a>
+    </div>
+    <div class="btn">
+      <a  [routerLink]="['/cadete/history']" routerLinkActive="router-link-active">Historial de Viajes</a>
+    </div>
+    <div class="btn">
+      <a (click)="cerrarSesion()">Cerrar Sesion</a>
+    </div>
+  </section>
+  <div class="img-content">
+    <img [src]="imgCadete" alt="">
+
+  </div>
+</div>

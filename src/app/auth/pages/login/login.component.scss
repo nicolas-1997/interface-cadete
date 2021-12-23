@@ -1,0 +1,109 @@
+.login--container{
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  color: white;
+
+  .img-container{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    img{
+      min-width: 16rem;
+      width: 25%;
+      max-width: 25rem;
+    }
+    margin-bottom: 1.5rem;
+  }
+
+  form{
+    width: 80%;
+    max-width: 40rem;
+    height: 60%;
+    max-height: 50rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color:  var(--background-secondary);
+    border-radius: 18px;
+
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+
+    .input-group{
+      width: 100%;
+      height: 40%;
+
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+
+
+      // border: 1px solid var(--green);
+      // border-radius: 12px;
+      border: none;
+
+      label{
+
+        font-size: 1.5rem;
+        color: var(--pink);
+        font-weight: bold;
+
+        margin-bottom: 1.5rem;
+        margin-left: 2rem;
+      }
+      input{
+        margin: 0 auto;
+        border: none;
+        border-radius: 4px;
+        width: 80%;
+        height: 2.5rem;
+        // max-height: 5rem;
+
+        background: none;
+        border: 1px solid var(--white-smoke);
+        color: var(--pink);
+        text-align: center;
+        font-size: 1rem;
+        font-weight: bold;
+      }
+      input::placeholder{
+        color: var(--pink);
+        opacity: 60%;
+      }
+    }
+    .btn-container{
+      width: 100%;
+      height: 8rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .btn{
+        width: 75%;
+        height: 3rem;
+        border: none;
+        border-radius: 12px;
+
+        background-color: var(--geen-baby);
+        color: var(--white-smoke);
+        font-size: 1.1rem;
+        font-weight: bold;
+        box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+
+      }
+    }
+  }
+}

@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+// import { LoginService } from './services/auth/login.service';
+
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'M5T1-V1';
+
+  // constructor(private loginService:LoginService){
+
+  // }
+
+  // ngOnInit(){
+  //   const userLS  = localStorage.getItem('userLogued');
+  //   if (userLS) {
+  //     this.loginService.getUserLogued().subscribe()
+  //   }
+  // }
 }

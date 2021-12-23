@@ -1,0 +1,50 @@
+<div class="list-cards">
+
+  <div class="info-Card">
+    <h1> {{title == '1' ? "Retiro" : "Entrega"}} </h1>
+    <p>{{direccion}} </p>
+  </div>
+
+  <div class="icono">
+    <button (click)="changeState()"><i class='bx bx-expand-alt'></i></button>
+  </div>
+
+</div>
+
+
+
+<div class="card--container">
+  <div class="card--content" [class.open]="state" [class.close]="!state">
+    <div class="close">
+      <button (click)="changeState()"><i class='bx bxs-x-circle'></i></button>
+    </div>
+    <div class="header">
+      <h1> {{title == '1' ? "Retiro" : "Entrega"}} </h1>
+      <p> Lugar de {{statusTravel == '1' ? "Retiro" : "Entrega"}} en {{direccion}} </p>
+    </div>
+    <div class="body">
+      <span>
+        <h4>Dirreccion</h4>
+        <p> {{direccion}} </p>
+      </span>
+      <span>
+        <h4>Hora</h4>
+        <p>{{hora}}</p>
+      </span>
+      <span>
+        <h4>Equipo</h4>
+        <p> {{equipo}} </p>
+      </span>
+      <span>
+        <h4>Estado de Viaje</h4>
+        <p> {{statusTravel == '1' ? "Retiro" : "Entrega"}} </p>
+      </span>
+    </div>
+    <div class="footer">
+      <div class="btn--content">
+        <button  (click)=" tomarViaje()" (click)="changeState()" class="accept">Tomar Viaje</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--  (click)=" tomarViaje()" -->

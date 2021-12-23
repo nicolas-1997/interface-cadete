@@ -1,4 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+:root{
+  // --green: .btn-grad {background-image: linear-gradient(to right, #134E5E 0%, #71B280  51%, #134E5E  100%)}
+  --green: #087F6B;
+  --geen-baby: #01c380;
+  --pink: #B6597F;
+  --gray-dark: #5F6261;
+  --gray-soft: #999E9C;
+  --white-smoke: #D9DADA;
+  --background-primary: #191e29;
+  --background-secondary: #132d46;
+  --morado: #5D2E5B;
+
+}
+html, body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: var(--background-primary);
+}
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

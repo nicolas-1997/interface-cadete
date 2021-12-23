@@ -1,0 +1,29 @@
+<div class="travels--Container">
+  <div class="category">
+    <ul class="list">
+      <li class="item uno"><button (click)="filtroRetiro()" >Retiro</button></li>
+      <li class="item all"><button (click)="filtroAll()" >All</button></li>
+      <li class="item dos"><button (click)="filtroEntrega()" >Entrega</button></li>
+    </ul>
+  </div>
+  <div class="travel-content" *ngIf="showArr.length != 0; else elseBlock">
+    <div *ngFor="let item of showArr">
+      <app-card
+      direccion="{{item.travelEquipmentDTOs[0].equipment.cliente.address}}"
+      title="{{item.lastStatusTravel}}"
+      hora="{{item.creationDate | date:'shortTime' }}"
+      equipo="{{item.travelEquipmentDTOs[0].equipment.mark}}"
+      statusTravel="{{item.lastStatusTravel}}"
+      [idtravel]="item.id"
+      [newStatusTravel]="item.lastStatusTravel"
+      >
+      </app-card>
+    </div>
+  </div>
+  <ng-template #elseBlock >
+    <div class="notArr">
+      <img src="../../../../assets/img/cancel.svg" style="width: 15rem;" alt="">
+      <h1>No pudimos encontrar Viajes Disponibles</h1>
+    </div>
+  </ng-template>
+</div>

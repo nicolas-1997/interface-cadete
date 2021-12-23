@@ -2,11 +2,12 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { QuicklinkStrategy } from 'ngx-quicklink';
 import { AuthGuard } from './guards/auth.guard';
+import { IdConfirmationGuard } from './guards/id-confirmation.guard';
 const routes: Routes = [
   {
-    path: 'website',
-    canActivate: [ AuthGuard ],
-    loadChildren: () => import('./website/website.module').then(m => m.WebsiteModule)
+    path: '',
+    redirectTo: 'auth',
+    pathMatch: 'full'
   },
   {
     path: 'cadete',
@@ -14,8 +15,8 @@ const routes: Routes = [
     loadChildren: () => import('./cadete/cadete.module').then(m => m.CadeteModule)
   },
   {
-    path: 'admin',
-    loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule)
+    path: 'auth',
+    loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule)
   }
 ];
 
